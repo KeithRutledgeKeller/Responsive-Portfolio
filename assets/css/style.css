@@ -53,7 +53,7 @@ body {
   /* header */
   
   #masthead {
-    position: fixed;
+    position: static;
     z-index: 99;
     width: 100%;
     margin: 0 0 30px;
@@ -216,22 +216,81 @@ body {
     border: 0 none;
   }
   
-  @media screen and (max-width: 980px) {
-    .container  { max-width: 900; background-color: red }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .container  { max-width: 700; background-color:magenta}
-  }
-
   @media screen and (max-width: 640px) {
-    .container  { max-width: 500; background-color: green}
-  }
+    .info  { float: left; }
+    .auth-image { 
+      width: auto;
+      height: auto;
+      width: 100%; 
+    }
+    nav {
+      margin-top: 25px;
+      padding-left: 35px;
+      float: left;
+    }
 
-  /* @media screen{
-    max-width: 768px;
+    #logo {
+      text-align: center;
+      width: 377px;
+      height: 90px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 90px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      background: #4aaaa5;
+    }
   }
+  @media screen and (max-width: 768px) {
+    .main-section { max-width: 640px;}
+    nav {
+      float: right;
+      margin-top: 25px;
+    }
 
-  @media screen{
-    max-width: 640px;
-  } */
+    nav a {
+      display: inline-block;
+      padding-left: 15px;
+      margin-left: 15px;
+      line-height: 18px;
+      color: #999;
+      text-decoration: none;
+      border-left: 1px solid #efefef;
+    }
+
+    #masthead {
+      position: static;
+      z-index: 99;
+      max-width: 640px;
+      margin: 0 0 30px;
+      overflow: auto;
+      color: #fff;
+      background: #fff;
+      border-bottom: 2px solid #ccc;
+    }
+
+  }
+  @media screen and (max-width: 980px) {
+    .main-section {  max-width: 768px; }
+  
+    #masthead {
+      position: static;
+      z-index: 99;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 0 30px;
+      overflow: auto;
+      color: #fff;
+      background: #fff;
+      border-bottom: 2px solid #ccc;
+    }
+
+    nav {
+      float: right;
+      margin-top: 25px;
+      margin-right: 25px;
+    }
+  
+  }
